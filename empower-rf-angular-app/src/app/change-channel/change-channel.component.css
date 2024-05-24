@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    max-width: 600px; /* Set a maximum width to prevent expanding to the whole screen */
+    margin: 0 auto; /* Center the container horizontally */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visibility */
+    border-radius: 8px; /* Round the corners */
+    background-color: white; /* Set a background color */
+  }
+  
+  .input-row {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    width: 80%;
+  }
+  
+  .input-row mat-form-field {
+    flex: 1;
+    margin-right: 8px;
+  }
+  
+  .input-row mat-form-field:last-child {
+    margin-right: 0;
+  }
+  
+  .submit-row {
+    align-self: flex-end;
+    margin-top: 16px;
+  }
+  
+  ::ng-deep .mat-form-field-placeholder {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      padding: 8px;
+    }
+  
+    .input-row {
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .input-row mat-form-field {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  
+    .input-row mat-form-field:last-child {
+      margin-bottom: 0;
+    }
+  
+    ::ng-deep .mat-form-field-placeholder {
+      font-size: 10px; /* Smaller font size for small screens */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .container {
+      padding: 4px;
+    }
+  
+    ::ng-deep .mat-form-field-placeholder {
+      font-size: 8px; /* Smaller font size for very small screens */
+    }
+  }
+  

@@ -1,0 +1,12 @@
+ table {
+    width: 900%;
+    margin: 16px;
+  }
+  
+  .mat-card {
+    margin: 20px;
+  }
+
+  .mat-card-title {
+    margin-left: 20px;
+  }

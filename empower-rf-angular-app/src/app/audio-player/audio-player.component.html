@@ -1,0 +1,8 @@
+    <div class="audio-container">
+        <audio #audio></audio>
+        <canvas #oscilloscope width="600" height="100"></canvas>
+        <button mat-icon-button (click)="togglePlayPause()">
+            <mat-icon>{{ isPlaying ? 'stop' : 'play_arrow' }}</mat-icon>
+        </button>
+  </div>
+  

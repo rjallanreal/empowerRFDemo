@@ -1,0 +1,16 @@
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+button {
+    margin: 10px;
+  }
+
+  canvas {
+    margin-top: 10px;
+    background-color: black;
+  }

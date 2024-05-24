@@ -1,0 +1,34 @@
+<!-- change-channel.component.html -->
+<mat-card class="container">
+    <mat-card-title>Change Radio Station</mat-card-title>
+    <mat-card-content>
+    <div class="input-row">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter name" [formControl]="nameControl">
+        <mat-error *ngIf="nameControl.hasError('required')">
+          Name is required
+        </mat-error>
+        <mat-error *ngIf="nameControl.hasError('naughtyWord')">
+          Name contains inappropriate language
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Frequency (MHz)</mat-label>
+        <input matInput placeholder="Enter frequency" [formControl]="frequencyControl">
+        <mat-error *ngIf="frequencyControl.hasError('required')">
+          Frequency is required
+        </mat-error>
+        <mat-error *ngIf="frequencyControl.hasError('pattern')">
+          Enter a valid frequency (e.g., 88.1)
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="submit-row">
+      <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!formValid()">Submit</button>
+    </div>
+</mat-card-content>
+</mat-card>
+  
